@@ -56,6 +56,7 @@ function Baby() {
                                 <h5 className="card-title">{item.title || ""}</h5>
                                 <h5 className="card-price">{item.price || ""}$ only  </h5>
                                 <p className="card-text">{item.description || ""}</p>
+                                <span>{""}</span>
                                 <button onClick={() => addToCart(item)}>Add To Cart</button>
                                 {/* <Link to={`/detail/${item.id}`}>Detail</Link> */}
                                 <Link to={`/detail/${item.id}`}>
