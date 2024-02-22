@@ -10,16 +10,17 @@ const Detail = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get(`https://dummyjson.com/products`);
-      const result = await response.data.products;
-      let productdetails = result.find((product) => product.id === parseInt(id));
+      const response = await axios.get(`http://localhost:3000/posts`);
+      const data = await response.data
+        console.log("data",data);
+      let productdetails = data.find((product) => product.id === parseInt(id));
       console.log("result", productdetails)
       setDetail(productdetails);
     } catch (error) {
       console.log(error);
     }
   };                            
-
+  
 
 
 
